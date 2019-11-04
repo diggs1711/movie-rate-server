@@ -1,22 +1,39 @@
 {
-	"name": "Movie_Rate",
+	"name": "movie_rate",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"sideEffects": false,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "tsc && node dist/index.js"
+		"start": "backpack",
+		"build": "backpack build",
+		"start:local": "node build/main.js",
+		"db:init": "ts-node db/init/index.ts",
+		"db:drop": "ts-node db/drop/index.ts"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"apollo-server": "^2.9.6",
+		"@types/graphql": "^14.5.0",
 		"apollo-server-cache-redis": "^1.1.4",
+		"apollo-server-express": "^2.9.7",
+		"apollo-server-plugin-response-cache": "^0.3.5",
+		"backpack-core": "^0.8.4",
+		"compression": "^1.7.4",
+		"cors": "^2.8.5",
+		"dataloader": "^1.4.0",
 		"datasource-sql": "^1.0.2",
 		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
 		"graphql": "^14.5.8",
+		"graphql-tools": "^4.0.6",
 		"knex": "^0.20.0",
-		"mssql": "^5.1.0"
+		"lodash": "^4.17.15",
+		"mssql": "^5.1.0",
+		"ts-loader": "^6.2.1",
+		"ts-node": "^8.4.1",
+		"typescript": "^3.6.4"
 	}
 }
